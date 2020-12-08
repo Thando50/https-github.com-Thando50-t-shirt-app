@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="t_shirt_app.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor ="Gray" Padding ="30" CornerRadius="0">
+                <Label Text="customer payment details" TextColor="White"/>
+            </Frame>
+
+            <ListView ItemsSource="{Binding Orders}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="0"/>
+                                <Label Text="{Binding Gender}" Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding  TshirtSize }" Grid.Row="0" Grid.Column="2"/>
+                                <Label Text="{Binding  DateofTransaction }" Grid.Row="0" Grid.Column="3"/>
+                                <Label Text="{Binding  TshirtColor }" Grid.Row="0" Grid.Column="4"/>
+                                <Label Text="{Binding  ShipppingAddress }" Grid.Row="0" Grid.Column="5"/>
+
+
+
+
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
